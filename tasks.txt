@@ -1,0 +1,51 @@
+Task 1 ===========================================================================================
+For the first assignment, spend time familiarizing yourself with Django. Look at the uptact directory (the project directory) and the contacts directory (an app directory). Answer the following questions for yourself:
+
+If I wanted to add a new URL to this project, what two files would I edit?
+    A: urls.py and ??
+If I wanted to add a birthday to each contact, what file would I edit?
+    1. models.py in Contacts folder,
+    2. Contacts -> migrations... make migrations and migrate in command line to update the database
+Then do the following steps:
+
+Add a birthday field to the Contact model. This field should be of type DateField and should be allowed to be null and empty.
+Make sure you can edit the birthday by changing the ContactForm.
+Add the ability to display the birthday on the list of contacts. You will have to edit templates/contacts/list_contacts.html.
+When you get through that, add a birthday to one of your contacts to test out your code.
+
+Task 2 ===========================================================================================
+With this assignment, we are going to explore relationships between models, and how URLs and views work.
+
+Answer the following questions:
+
+If I wanted to add a new model, where would I do that?
+If I wanted to connect the new model to the Contact model, how would I do that?
+Then do the following steps:
+
+Add a new model, Note, to the contacts app. This model should contain text for the note and the date/time of the note. Look at the auto_now_add option for the DateTimeField to have the date/time automatically populated.
+Connect the Note model to the Contact model using a ForeignKey.
+Use the Django console to add a note to one of your contacts.
+Make a new view and template to see an individual contact. The URL for this view should be contacts/<int:pk>/. Show the notes for that contact on this individual view. Otherwise, this page can look like an individual contact on the contacts list page.
+
+Task 3  ========================================================================================
+With this assignment, we are going to explore forms.
+
+Previously, you added a Note model, but had no ability to create new notes through your Django application. Now do the following steps:
+
+Add a new form called NoteForm. This form should let you edit only one field, the text of the note.
+Add a new view to accept this form via POST request and add a new note to a specific contact. The contact will be specified via the URL, which should be contacts/<int:pk>/notes/.
+On the individual contact view that you previously added, add a form to create new notes. When the note is created, redirect back to the contact view.
+Test this by adding some notes to individual contacts.
+
+About this project =============================================================================
+This project makes some additions and modifications to the defaults in Django:
+
+There is a custom user model defined in users.models.User.
+There is a templates/ and a static/ directory at the top level, both of which are set up to be used.
+A .gitignore file is provided.
+Pipenv is used to manage dependencies.
+It also adds the following dependencies:
+
+django-extensions - adds some additional helpful django commands
+django-debug-toolbar - gives us a debugging panel in the browser
+django-environ - lets us use a .env file to hide some of our settings. DEBUG, SECRET_KEY, and DATABASES settings are set by this package.
