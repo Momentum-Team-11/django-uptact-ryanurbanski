@@ -12,4 +12,20 @@
             </div>
         </form>
     </div>
+
+    <!-- Everything below here in the block is just to test.. delete later -->
+    <hr>
+
+    <h1>Add Note</h1>
+
+    <div>
+        <form action="{% url 'add_note' %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div>
+                <button type="submit">Add Note</button>
+            </div>
+        </form>
+    </div>
+    
 {% endblock %}

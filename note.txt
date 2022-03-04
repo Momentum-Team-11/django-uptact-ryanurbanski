@@ -1,0 +1,11 @@
+
+Hi my name is Ryan Urbanski
+
+I was working as a Project Engineer in Pennsylvania designing HVAC and renewable energy systems
+and outside my normal role developed an automated kpi tracking system to make our business data actionable.
+
+In the process I realized I had more fun solving these problems than the work I was getting paid
+for and started the switch to a career in software development.
+
+I returned to Penn State to earn my IST degree from their World Campus and recently began an intenisve 
+bootcamp at Momentum
