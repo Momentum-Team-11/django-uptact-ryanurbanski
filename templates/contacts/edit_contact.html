@@ -4,12 +4,12 @@
 <h1>Edit Contact</h1>
 
 <div>
-  <form action="{% url 'edit_contact' pk=contact.pk %}" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div>
-      <button type="submit">Update Contact</button>
-    </div>
-  </form>
+    <form action="{% url 'edit_contact' pk=contact.pk %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div>
+            <button type="submit">Update Contact</button>
+        </div>
+    </form>
 </div>
 {% endblock %}
